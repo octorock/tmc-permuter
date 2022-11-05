@@ -3,7 +3,7 @@
 # Expects input.c and input.s to be in this folder.
 # Creates base.c and target.s.
 
-export PATH=$PATH:/opt/devkitpro/devkitARM/bixn/
+export PATH=$PATH:/opt/devkitpro/devkitARM/bin/
 TMC=/repo
 
 PREPROC=$TMC/tools/bin/preproc
