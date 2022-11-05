@@ -50,7 +50,7 @@ RUN apt install -y gcc python3 python3-pip libffi-dev
 WORKDIR /agbcc
 RUN . /etc/profile.d/devkit-env.sh && sh build.sh
 
-ENV PATH="${PATH}:/opt/devkitpro/devkitARM/bin/"
+ENV PATH="${PATH}:/opt/devkitpro/devkitARM/bin/:/agbcc"
 
 # Install python dependencies for permuter worker.
 RUN pip3 install pycparser pynacl toml

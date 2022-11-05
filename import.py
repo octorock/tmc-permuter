@@ -9,6 +9,7 @@ import requests
 import os
 import shutil
 import subprocess
+import multiprocessing
 
 BACKEND_URL = 'https://backend.uk.to'
 
@@ -60,4 +61,11 @@ subprocess.check_call('./prepare.sh', cwd=name)
 
 full_path = os.path.abspath(name)
 
-print(f'./permuter.py -J --stop-on-zero {full_path}')
+cpus = multiprocessing.cpu_count()
+threads = max(1, round(cpus/2), cpus-2)
+
+print(f'Sucessfully imported into {name} folder.\n')
+print('Run the permuter locally:')
+print(f'./permuter.py -j {threads} --stop-on-zero {full_path}\n')
+print('Run with permuter@home:')
+print(f'./permuter.py -J -j {threads} --stop-on-zero {full_path}\n')

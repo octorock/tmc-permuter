@@ -46,9 +46,9 @@ Enter the token that they send you.
 Check that the connection was successfully set up.
 
 ### Run client
-To use the permuter@home network for compilation use `-J` instead of `-j THREADS` for the permuter:
+To use the permuter@home network for compilation add `-J` to the permuter:
 ```
-./permuter.py --stop-on-zero -J FOLDER
+./permuter.py --stop-on-zero -J -j 4 FOLDER
 ```
 
 ### Run worker
