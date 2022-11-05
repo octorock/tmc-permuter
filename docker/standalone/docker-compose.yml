@@ -1,0 +1,6 @@
+version: "3"
+services:
+  permuter:
+    build: .
+    volumes:
+      - ./example:/permuter/example

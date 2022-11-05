@@ -1,0 +1,10 @@
+*
+!import.py
+!README.md
+!.gitignore
+!example
+!example/compile.sh
+!example/prepare.py
+!example/prepare.sh
+!docker
+!docker/**
